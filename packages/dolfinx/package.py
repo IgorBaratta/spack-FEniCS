@@ -17,7 +17,6 @@ class Dolfinx(CMakePackage):
 
     version("development", branch="master")
     version("kahip", branch="igor/install-kahip")
-    version("subset", branch="igor/issue9")
 
     extends("python")
 
@@ -25,7 +24,7 @@ class Dolfinx(CMakePackage):
 
     depends_on("mpi")
     depends_on("hdf5+hl+fortran")
-    depends_on("petsc+mpi+shared+hypre+metis~superlu-dist@3.11:")
+    depends_on("petsc+mpi+shared+hypre+metis+mumps+suite-sparse~superlu-dist@develop")
     depends_on("py-numpy")
     depends_on("py-sympy")
     depends_on("py-ffcx@master")
