@@ -16,8 +16,7 @@ class PyFiat(PythonPackage):
     triangles and tetrahedra. Upcoming versions will also support Hermite and
     nonconforming elements"""
 
-    homepage = "https://bitbucket.org/fenics-project/fiat"
-    url = "https://bitbucket.org/fenics-project/fiat/downloads/fiat-2018.1.0.tar.gz"
-    git = "https://bitbucket.org/fenics-project/fiat.git"
+    homepage = "https://github.com/FEniCS/fiat"
+    git = "https://github.com/FEniCS/fiat.git"
 
     version("master", branch="master")

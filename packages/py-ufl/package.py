@@ -13,9 +13,8 @@ class PyUfl(PythonPackage):
     spaces and defining expressions for weak forms in a notation close to
     mathematical notation."""
 
-    homepage = "https://bitbucket.org/fenics-project/ufl"
-    url = "https://bitbucket.org/fenics-project/ufl/downloads/ufl-2018.1.0.tar.gz"
-    git = "https://bitbucket.org/fenics-project/ufl.git"
+    homepage = "https://github.com/FEniCS/ufl"
+    git = "https://github.com/FEniCS/ufl.git"
 
     version("master", branch="master")
 
