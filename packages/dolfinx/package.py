@@ -16,15 +16,14 @@ class Dolfinx(CMakePackage):
     submodules = True
 
     version("development", branch="master")
-    version("kahip", branch="igor/install-kahip")
 
     extends("python")
 
     variant("doc", default=False, description="Builds the documentation")
 
-    depends_on("mpi")
+    depends_on("mpi ^mpich@3:")
     depends_on("hdf5+hl+fortran")
-    depends_on("petsc+mpi+shared+hypre+metis+mumps+suite-sparse~superlu-dist@develop")
+    depends_on("petsc+mpi+shared+hypre+metis+mumps~superlu-dist@develop")
     depends_on("py-numpy")
     depends_on("py-sympy")
     depends_on("py-ffcx@master")
@@ -37,7 +36,7 @@ class Dolfinx(CMakePackage):
     depends_on("metis")
     depends_on("boost")
 
-    depends_on("cmake@2.8.12:", type="build")
+    depends_on("cmake@3:", type="build")
 
     root_cmakelists_dir = "cpp"
 
