@@ -18,13 +18,6 @@ class FenicsPerformanceTest(CMakePackage):
     depends_on("dolfinx")
     depends_on("boost+program_options")
 
-    @run_before("cmake")
-    def compile_forms(self):
-        ffc = which("ffc", path=self.spec["py-ffcx"].prefix.bin)
-        with working_dir("src"):
-            ffc("Elasticity.ufl")
-            ffc("Poisson.ufl")
-
     def install(self, spec, prefix):
         mkdirp(prefix.bin)
         install(join_path("..", "spack-build", "dolfin-scaling-test"), prefix.bin)
