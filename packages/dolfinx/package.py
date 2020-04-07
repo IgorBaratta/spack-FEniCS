@@ -31,10 +31,9 @@ class Dolfinx(CMakePackage):
     depends_on("py-fiat@master")
     depends_on("py-ufl@master")
     depends_on("scotch+mpi~metis")
-    depends_on("python@3.5:")
+    depends_on("python@3.8:")
     depends_on("py-sphinx@1.0.1:", when="+doc", type="build")
-    depends_on("eigen~fftw~metis~mpfr~scotch~suitesparse@3.2.0:")
-    depends_on("metis")
+    depends_on("eigen~mpfr~scotch~suitesparse@3.2.0:")
     depends_on("boost")
 
     depends_on("cmake@3:", type="build")
