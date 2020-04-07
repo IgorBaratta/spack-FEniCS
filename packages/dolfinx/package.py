@@ -16,6 +16,7 @@ class Dolfinx(CMakePackage):
     submodules = True
 
     version("development", branch="master")
+    version("indexmap", branch="igor/time-indexmap")
 
     extends("python")
 
